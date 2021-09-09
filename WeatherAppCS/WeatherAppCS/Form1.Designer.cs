@@ -35,14 +35,15 @@ namespace WeatherAppCS
             this.TitleText = new System.Windows.Forms.Label();
             this.UserInputTextBox = new System.Windows.Forms.TextBox();
             this.UserInputPanel = new System.Windows.Forms.Panel();
+            this.InputInfoPlcb = new System.Windows.Forms.Label();
             this.ResultPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.WeatherPic = new System.Windows.Forms.PictureBox();
             this.ConditionPlaceholder = new System.Windows.Forms.Label();
             this.LocationPlaceHolder = new System.Windows.Forms.Label();
             this.BTN_back = new System.Windows.Forms.Button();
             this.UserInputPanel.SuspendLayout();
             this.ResultPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeatherPic)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -85,15 +86,18 @@ namespace WeatherAppCS
             this.UserInputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
             this.UserInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserInputTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.UserInputTextBox.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UserInputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(3)))), ((int)(((byte)(104)))));
             this.UserInputTextBox.Location = new System.Drawing.Point(324, 195);
             this.UserInputTextBox.Multiline = true;
             this.UserInputTextBox.Name = "UserInputTextBox";
+            this.UserInputTextBox.PlaceholderText = "Amsterdam";
             this.UserInputTextBox.Size = new System.Drawing.Size(160, 35);
             this.UserInputTextBox.TabIndex = 0;
             // 
             // UserInputPanel
             // 
+            this.UserInputPanel.Controls.Add(this.InputInfoPlcb);
             this.UserInputPanel.Controls.Add(this.UserInputTextBox);
             this.UserInputPanel.Controls.Add(this.TitleText);
             this.UserInputPanel.Controls.Add(this.BTNuserInput);
@@ -102,30 +106,39 @@ namespace WeatherAppCS
             this.UserInputPanel.Size = new System.Drawing.Size(913, 433);
             this.UserInputPanel.TabIndex = 3;
             // 
+            // InputInfoPlcb
+            // 
+            this.InputInfoPlcb.AutoSize = true;
+            this.InputInfoPlcb.Location = new System.Drawing.Point(324, 177);
+            this.InputInfoPlcb.Name = "InputInfoPlcb";
+            this.InputInfoPlcb.Size = new System.Drawing.Size(31, 15);
+            this.InputInfoPlcb.TabIndex = 4;
+            this.InputInfoPlcb.Text = "City:";
+            // 
             // ResultPanel
             // 
-            this.ResultPanel.Controls.Add(this.pictureBox1);
+            this.ResultPanel.Controls.Add(this.WeatherPic);
             this.ResultPanel.Controls.Add(this.ConditionPlaceholder);
             this.ResultPanel.Controls.Add(this.LocationPlaceHolder);
             this.ResultPanel.Controls.Add(this.BTN_back);
-            this.ResultPanel.Location = new System.Drawing.Point(15, 12);
+            this.ResultPanel.Location = new System.Drawing.Point(15, 14);
             this.ResultPanel.Name = "ResultPanel";
             this.ResultPanel.Size = new System.Drawing.Size(913, 430);
             this.ResultPanel.TabIndex = 3;
             this.ResultPanel.Visible = false;
             // 
-            // pictureBox1
+            // WeatherPic
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(324, 166);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.WeatherPic.BackColor = System.Drawing.Color.Transparent;
+            this.WeatherPic.Cursor = System.Windows.Forms.Cursors.Default;
+            this.WeatherPic.Image = ((System.Drawing.Image)(resources.GetObject("WeatherPic.Image")));
+            this.WeatherPic.ImageLocation = "";
+            this.WeatherPic.Location = new System.Drawing.Point(324, 166);
+            this.WeatherPic.Name = "WeatherPic";
+            this.WeatherPic.Size = new System.Drawing.Size(72, 65);
+            this.WeatherPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WeatherPic.TabIndex = 5;
+            this.WeatherPic.TabStop = false;
             // 
             // ConditionPlaceholder
             // 
@@ -171,8 +184,8 @@ namespace WeatherAppCS
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(19)))), ((int)(((byte)(136)))));
             this.ClientSize = new System.Drawing.Size(940, 471);
-            this.Controls.Add(this.ResultPanel);
             this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.ResultPanel);
             this.Controls.Add(this.UserInputPanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
             this.Name = "Form1";
@@ -182,7 +195,7 @@ namespace WeatherAppCS
             this.UserInputPanel.PerformLayout();
             this.ResultPanel.ResumeLayout(false);
             this.ResultPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeatherPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,11 +210,12 @@ namespace WeatherAppCS
         private System.Windows.Forms.Panel ResultPanel;
         private System.Windows.Forms.Button BTN_back;
         private System.Windows.Forms.Label LocationPlaceHolder;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox WeatherPic;
         private System.Windows.Forms.Label Condition;
         private System.Windows.Forms.Label Temp;
         private System.Windows.Forms.Label Country;
         private System.Windows.Forms.Label ConditionPlaceholder;
+        private System.Windows.Forms.Label InputInfoPlcb;
     }
 }
 

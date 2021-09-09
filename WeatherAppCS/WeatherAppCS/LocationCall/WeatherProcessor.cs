@@ -21,12 +21,15 @@ namespace WeatherAppCS
             {
                 if (respone.IsSuccessStatusCode)
                 {
-                    ApiResultModel location = await respone.Content.ReadAsAsync<ApiResultModel>();
 
+
+
+                    ApiResultModel DataSet = await respone.Content.ReadAsAsync<ApiResultModel>();
+                       
                     return new ApiResultModel
                     {
-                        Location = location.Location,
-                        Current = location.Current,
+                        Location = DataSet.Location,
+                        Current = DataSet.Current,
                     };
                }
                 else

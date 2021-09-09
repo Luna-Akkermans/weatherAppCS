@@ -17,11 +17,25 @@ namespace WeatherAppCS
         public string Country { get; set; }
         public string Localtime { get; set; }
 
+
+    }
+    public class Condition
+    {
+        public string text { get; set; }
+        public string icon { get; set; }
+        public int code { get; set; }
+    }
+
+    public class CurrentModel
+    {
         public string last_updated { get; set; }
         public double temp_c { get; set; }
-        public int is_day { get; set; }
-        public double wind_kph { get; set; }
+        public Condition condition { get; set; }
+  
     }
+
+
+
 
 
 }

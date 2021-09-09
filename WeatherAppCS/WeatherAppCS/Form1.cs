@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
-
+using System.Text.RegularExpressions;
 
 namespace WeatherAppCS
 {
@@ -32,9 +32,9 @@ namespace WeatherAppCS
         {
             var dataInformation = await WeatherProcessor.LoadLocation(UserInputTextBox.Text);
             LocationPlaceHolder.Text = $"{dataInformation.Location.Name}, {dataInformation.Location.Country}";
-            ConditionPlaceholder.Text = $"{ dataInformation.Location.temp_c} {System.Environment.NewLine} test";
-
-
+            ConditionPlaceholder.Text = $"{ dataInformation.Current.temp_c} {System.Environment.NewLine}{dataInformation.Current.condition.text}";
+            string imgSource = dataInformation.Current.condition.icon;
+            WeatherPic.Load($"https:{imgSource}");
 
         }
 
@@ -42,14 +42,14 @@ namespace WeatherAppCS
 
         private void BTNuserInput_Click(object sender, EventArgs e)
         {
-            //Check if the user has entered any data.
+            //Check if the user has entered any data.Could not find a part of the path 'D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3
             if (!String.IsNullOrEmpty(UserInputTextBox.Text))
             {
                 //Go to next panel.
                 ResultPanel.Visible = true;
                 UserInputPanel.Visible = false;
 
-                //Load location data
+                //Load data
                 GetData();
 
 

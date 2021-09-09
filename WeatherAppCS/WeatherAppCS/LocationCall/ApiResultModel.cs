@@ -13,7 +13,9 @@ namespace WeatherAppCS
     public class ApiResultModel
     {
         public WeatherModel Location { get; set; }
-        public WeatherModel Current { get; set; }
+        public CurrentModel Current { get; set; }
+
+        
 
 
     }
