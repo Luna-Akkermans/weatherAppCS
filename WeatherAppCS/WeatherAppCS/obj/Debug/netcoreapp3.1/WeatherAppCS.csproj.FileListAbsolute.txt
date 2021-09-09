@@ -1,0 +1,17 @@
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3.1\WeatherAppCS.exe
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3.1\WeatherAppCS.deps.json
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3.1\WeatherAppCS.runtimeconfig.json
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3.1\WeatherAppCS.runtimeconfig.dev.json
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3.1\WeatherAppCS.dll
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\bin\Debug\netcoreapp3.1\WeatherAppCS.pdb
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.csproj.AssemblyReference.cache
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.Form1.resources
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.csproj.GenerateResource.cache
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.AssemblyInfoInputs.cache
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.AssemblyInfo.cs
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.csproj.CoreCompileInputs.cache
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.dll
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.pdb
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.genruntimeconfig.cache
+D:\CS_Apps\weatherAppCS\WeatherAppCS\WeatherAppCS\obj\Debug\netcoreapp3.1\WeatherAppCS.Properties.Resources.resources
