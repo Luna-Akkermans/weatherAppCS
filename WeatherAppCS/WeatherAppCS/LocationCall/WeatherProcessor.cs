@@ -11,20 +11,24 @@ using System.Net.Http;
 
 namespace WeatherAppCS
 {
-    public class LocationProcessor
+    public class WeatherProcessor
     {
-        public static async Task<LocationModel> LoadLocation(string city)
+        public static async Task<ApiResultModel> LoadLocation(string city)
         {
             string url = $"http://api.weatherapi.com/v1/current.json?key=c70a004070bf4ddb87793146210609&q={city}&aqi=no";
 
             using (HttpResponseMessage respone = await ApiHelper.ApiClient.GetAsync(url))
             {
-                if(respone.IsSuccessStatusCode)
+                if (respone.IsSuccessStatusCode)
                 {
-                    LocationResultModel location = await respone.Content.ReadAsAsync<LocationResultModel>();
+                    ApiResultModel location = await respone.Content.ReadAsAsync<ApiResultModel>();
 
-                    return location.Location;
-                }
+                    return new ApiResultModel
+                    {
+                        Location = location.Location,
+                        Current = location.Current,
+                    };
+               }
                 else
                 {
                     throw new Exception(respone.ReasonPhrase);

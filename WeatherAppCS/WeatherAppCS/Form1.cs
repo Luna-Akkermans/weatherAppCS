@@ -28,13 +28,14 @@ namespace WeatherAppCS
         }
 
         
-        private async void GetLocationData()
+        private async void GetData()
         {
-            var locationInfo = await LocationProcessor.LoadLocation(UserInputTextBox.Text);
-            CityPlaceHolder.Text = locationInfo.Name;
-            CountryPlaceholder.Text = locationInfo.Country;
+            var dataInformation = await WeatherProcessor.LoadLocation(UserInputTextBox.Text);
+            LocationPlaceHolder.Text = $"{dataInformation.Location.Name}, {dataInformation.Location.Country}";
+            ConditionPlaceholder.Text = $"{ dataInformation.Location.temp_c} {System.Environment.NewLine} test";
 
-            
+
+
         }
 
 
@@ -49,7 +50,7 @@ namespace WeatherAppCS
                 UserInputPanel.Visible = false;
 
                 //Load location data
-                GetLocationData();
+                GetData();
 
 
             }
@@ -69,6 +70,14 @@ namespace WeatherAppCS
             UserInputPanel.Visible = true;
         }
 
+        private void CityPlaceHolder_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void ExtraAddition_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

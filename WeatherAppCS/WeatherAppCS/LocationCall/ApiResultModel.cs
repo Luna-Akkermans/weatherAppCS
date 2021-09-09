@@ -10,8 +10,12 @@ using System.Windows.Forms;
 using System.Net.Http;
 namespace WeatherAppCS
 {
-    public class LocationResultModel
+    public class ApiResultModel
     {
-        public LocationModel Location { get; set; }
+        public WeatherModel Location { get; set; }
+        public WeatherModel Current { get; set; }
+
+
     }
+
 }
