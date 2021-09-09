@@ -38,9 +38,9 @@ namespace WeatherAppCS
             this.ResultPanel = new System.Windows.Forms.Panel();
             this.ExtraAddition = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Condition = new System.Windows.Forms.Label();
-            this.Temp = new System.Windows.Forms.Label();
-            this.Country = new System.Windows.Forms.Label();
+            this.ConditionPlaceholder = new System.Windows.Forms.Label();
+            this.TempPlaceholder = new System.Windows.Forms.Label();
+            this.CountryPlaceholder = new System.Windows.Forms.Label();
             this.CityPlaceHolder = new System.Windows.Forms.Label();
             this.BTN_back = new System.Windows.Forms.Button();
             this.UserInputPanel.SuspendLayout();
@@ -94,7 +94,6 @@ namespace WeatherAppCS
             this.UserInputTextBox.Name = "UserInputTextBox";
             this.UserInputTextBox.Size = new System.Drawing.Size(160, 35);
             this.UserInputTextBox.TabIndex = 0;
-            this.UserInputTextBox.TextChanged += new System.EventHandler(this.UserInputTextBox_TextChanged);
             // 
             // UserInputPanel
             // 
@@ -110,9 +109,9 @@ namespace WeatherAppCS
             // 
             this.ResultPanel.Controls.Add(this.ExtraAddition);
             this.ResultPanel.Controls.Add(this.pictureBox1);
-            this.ResultPanel.Controls.Add(this.Condition);
-            this.ResultPanel.Controls.Add(this.Temp);
-            this.ResultPanel.Controls.Add(this.Country);
+            this.ResultPanel.Controls.Add(this.ConditionPlaceholder);
+            this.ResultPanel.Controls.Add(this.TempPlaceholder);
+            this.ResultPanel.Controls.Add(this.CountryPlaceholder);
             this.ResultPanel.Controls.Add(this.CityPlaceHolder);
             this.ResultPanel.Controls.Add(this.BTN_back);
             this.ResultPanel.Location = new System.Drawing.Point(15, 12);
@@ -145,38 +144,38 @@ namespace WeatherAppCS
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // Condition
+            // ConditionPlaceholder
             // 
-            this.Condition.AutoSize = true;
-            this.Condition.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Condition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
-            this.Condition.Location = new System.Drawing.Point(403, 167);
-            this.Condition.Name = "Condition";
-            this.Condition.Size = new System.Drawing.Size(81, 32);
-            this.Condition.TabIndex = 4;
-            this.Condition.Text = "Sunny";
+            this.ConditionPlaceholder.AutoSize = true;
+            this.ConditionPlaceholder.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ConditionPlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
+            this.ConditionPlaceholder.Location = new System.Drawing.Point(403, 167);
+            this.ConditionPlaceholder.Name = "ConditionPlaceholder";
+            this.ConditionPlaceholder.Size = new System.Drawing.Size(81, 32);
+            this.ConditionPlaceholder.TabIndex = 4;
+            this.ConditionPlaceholder.Text = "Sunny";
             // 
-            // Temp
+            // TempPlaceholder
             // 
-            this.Temp.AutoSize = true;
-            this.Temp.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Temp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
-            this.Temp.Location = new System.Drawing.Point(403, 199);
-            this.Temp.Name = "Temp";
-            this.Temp.Size = new System.Drawing.Size(58, 32);
-            this.Temp.TabIndex = 3;
-            this.Temp.Text = "10.1";
+            this.TempPlaceholder.AutoSize = true;
+            this.TempPlaceholder.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TempPlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
+            this.TempPlaceholder.Location = new System.Drawing.Point(403, 199);
+            this.TempPlaceholder.Name = "TempPlaceholder";
+            this.TempPlaceholder.Size = new System.Drawing.Size(58, 32);
+            this.TempPlaceholder.TabIndex = 3;
+            this.TempPlaceholder.Text = "10.1";
             // 
-            // Country
+            // CountryPlaceholder
             // 
-            this.Country.AutoSize = true;
-            this.Country.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Country.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
-            this.Country.Location = new System.Drawing.Point(466, 128);
-            this.Country.Name = "Country";
-            this.Country.Size = new System.Drawing.Size(144, 32);
-            this.Country.TabIndex = 2;
-            this.Country.Text = "Netherlands";
+            this.CountryPlaceholder.AutoSize = true;
+            this.CountryPlaceholder.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CountryPlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(233)))), ((int)(((byte)(218)))));
+            this.CountryPlaceholder.Location = new System.Drawing.Point(466, 128);
+            this.CountryPlaceholder.Name = "CountryPlaceholder";
+            this.CountryPlaceholder.Size = new System.Drawing.Size(144, 32);
+            this.CountryPlaceholder.TabIndex = 2;
+            this.CountryPlaceholder.Text = "Netherlands";
             // 
             // CityPlaceHolder
             // 
@@ -241,6 +240,9 @@ namespace WeatherAppCS
         private System.Windows.Forms.Label Condition;
         private System.Windows.Forms.Label Temp;
         private System.Windows.Forms.Label Country;
+        private System.Windows.Forms.Label ConditionPlaceholder;
+        private System.Windows.Forms.Label TempPlaceholder;
+        private System.Windows.Forms.Label CountryPlaceholder;
     }
 }
 
